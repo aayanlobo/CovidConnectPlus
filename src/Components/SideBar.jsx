@@ -1,3 +1,4 @@
+//It is used to design the dashboard of the Web App
 import contact from '../utils/contact-book.png';
 import bar from '../utils/bar-chart.png';
 import { Link } from "react-router-dom"
@@ -6,6 +7,7 @@ export default function Sidebar() {
     return (
         <div className="flex border-r-2">
             <div className="flex pt-16 flex-col h-screen p-2 bg-white shadow-md w-60">
+                {/* Logo is inserted in the dashboard panel  */}
             <img src={ require('./bg.png')} />
 
                 <div className="space-y-3">

@@ -31,7 +31,7 @@ const Dashboard = () => {
   const [chartData, setChartData] = useState({});
 
 
-
+  // Below the API keys to fetch the realtime data is used
   useEffect(() => {
     axios(
       "https://disease.sh/v3/covid-19/countries"
@@ -82,7 +82,6 @@ const Dashboard = () => {
 
   }, []);
 
-
   return (
     <div className="  w-full pt-20 px-4 pb-8" >
       <h2 className="text-2xl text-white font-bold mb-4">
@@ -90,8 +89,6 @@ const Dashboard = () => {
                 Corona Cases Line Graph
                 </button>
                 </h2>
-
-
 
       <div className="border-2 border-teal-600 w-11/12  m-auto 10 auto 10" >
 
@@ -125,22 +122,11 @@ const Dashboard = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
-
-
-
-
           <WorldMap countriesData={countriesData} />
 
         </MapContainer>
 
-
-
-
       </div>
-
-
-
-
     </div>
   );
 };

@@ -37,13 +37,13 @@ export default function reducer(state = initialState, action) {
 
 
       let flag=0
-       if(action.payload.first_name==""||action.payload.last_name==""||action.payload.mob==""){
+       if(action.payload.first_name===""||action.payload.last_name===""||action.payload.mob===""){
           alert('ohh You Missed Required Input , Please fill')
         flag=1
       }
       else{
      state.contacts.forEach((el)=>{
-        if(el.first_name==action.payload.first_name&&el.last_name==action.payload.last_name){
+        if(el.first_name===action.payload.first_name&&el.last_name===action.payload.last_name){
             alert('Name Already Exist In Contact')
             flag=1
         }
@@ -61,11 +61,6 @@ export default function reducer(state = initialState, action) {
           return {
         ...state,
         contacts: [
-          // ...state.contacts,
-          // {
-          //   id: state.contacts.length + 1,
-          //  ...action.payload
-          // },
         ...updatedContacts],
       };
     
@@ -77,9 +72,8 @@ export default function reducer(state = initialState, action) {
     case REMOVE_CONTACT:{
 
       let Contacts=JSON.parse(localStorage.getItem("contacts"))
-     let updatedContacts=Contacts.filter((el)=>el.id!=action.payload.id)
+     let updatedContacts=Contacts.filter((el)=>el.id!==action.payload.id)
       localStorage.setItem('contacts',JSON.stringify(updatedContacts))
-      // console.log(localStorage.getItem("contacts"))
           return {
         ...state,
        
@@ -90,7 +84,7 @@ export default function reducer(state = initialState, action) {
   
     case EDIT_CONTACT: {
 
-      if(action.payload.first_name==""||action.payload.last_name==""||action.payload.mob==""){
+      if(action.payload.first_name===""||action.payload.last_name===""||action.payload.mob===""){
         alert('Input Fields Can Not Be Leave Empty')
         // flag=1
         return state
@@ -103,7 +97,7 @@ export default function reducer(state = initialState, action) {
         let Contacts=JSON.parse(localStorage.getItem("contacts"))
 
         Contacts.forEach((el)=>{
-          if(el.id!=action.payload.id&&el.first_name==action.payload.first_name&&el.last_name==action.payload.last_name){
+          if(el.id!==action.payload.id&&el.first_name===action.payload.first_name&&el.last_name===action.payload.last_name){
             alert("Name Already Exist!!")
             flag=1
             return state
@@ -115,7 +109,7 @@ export default function reducer(state = initialState, action) {
         }
         else{
            let  updatedContacts=Contacts.map((el)=>{
-          if(el.id==action.payload.id){
+          if(el.id===action.payload.id){
             return  el={...action.payload}
           }
           else{
@@ -127,7 +121,7 @@ export default function reducer(state = initialState, action) {
            return {
         ...state,
         contacts: state.contacts.map((el)=>{
-          if(el.id==action.payload.id){
+          if(el.id===action.payload.id){
             // console.log(action.payload)
           //  return  el={...action.payload}
 
@@ -142,8 +136,6 @@ export default function reducer(state = initialState, action) {
         }
      
       }
-
-     
       }
       
     default:

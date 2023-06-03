@@ -1,4 +1,4 @@
-
+// All contacts are visible here and edit and delete option is also available
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
@@ -35,7 +35,7 @@ const Contacts = () => {
                 </button>
 
             </div>
-            {AllContacts.length == 0 && <div className=" m-auto w-fit p-4 align-middle text-blue-500 justify-center">
+            {AllContacts.length === 0 && <div className=" m-auto w-fit p-4 align-middle text-blue-500 justify-center">
 
                 <svg className="m-auto" width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M52.6631 127.029C52.6631 127.029 91.434 125.477 99.8125 61.7456C107.253 5.14629 172.631 30.9083 191.529 53.4701C216.01 82.6971 202.96 132.974 234.629 139.325C266.299 145.676 245.618 216.292 197.546 209.533C137.746 201.125 152.214 236.069 134.262 250.859C121.379 261.475 68.5515 251.256 66.7908 212.723C65.3092 180.297 51.6315 180.4 41.9366 176.723C27.9544 171.421 19.1441 133.017 52.6631 127.029Z" fill="#DEE9FF" />
@@ -65,7 +65,7 @@ const Contacts = () => {
                                     <p>First Name : {el.first_name}</p>
                                     <p>Last Name  : {el.last_name}</p>
                                     <p>Mobile   : {el.mob}</p>
-                                    <p>Status     : {el.status == "active" ? "Active" : "Inactive"}</p>
+                                    <p>Status     : {el.status === "active" ? "Active" : "Inactive"}</p>
                                 </div>
 
                             </div>

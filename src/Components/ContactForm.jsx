@@ -1,3 +1,5 @@
+// Importing dependencies
+// This jsx is used to create Contact form using tailwindCss,Redux for storage.
 import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { addContact } from '../Redux/action';
@@ -24,10 +26,6 @@ function ContactForm() {
 
 
     }
-
-
-
-
     function handleSave() {
 
 

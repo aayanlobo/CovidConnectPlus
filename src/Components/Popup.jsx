@@ -1,3 +1,4 @@
+// This file is used to create Popup on clicking the contact name 
 import React from 'react';
 const Popup = ({ close, el }) => {
 
@@ -22,7 +23,7 @@ const Popup = ({ close, el }) => {
                         <p>First Name : {el.first_name}</p>
                         <p>Last Name  : {el.last_name}</p>
                         <p>Mobile   : {el.mob}</p>
-                        <p>Status     : {el.status == "active" ? "Active" : "Inactive"}</p>
+                        <p>Status     : {el.status === "active" ? "Active" : "Inactive"}</p>
                     </div>
 
 
