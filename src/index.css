@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.leaflet-container {
+  width: 100%;
+  height: 70vh;
+}
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 0.75px rgb(35, 175, 185);
+  }
+}
