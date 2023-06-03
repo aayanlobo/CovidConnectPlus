@@ -36,12 +36,12 @@ export default function Sidebar() {
                                 </Link>
                             </li>
                             <li className="rounded-sm">
-                                <Link
-                                     to={{pathname: "https://github.com/aayanlobo/CovidConnectPlus" }} target="_blank"
+                                 <a
+                                    href="https://github.com/aayanlobo/CovidConnectPlus"  target="_blank"
                                     className="flex items-center p-2 space-x-3 rounded-md font-bold hover:font-outline">
                                     <img src={git} alt="" />
                                     <span>GitHub Repo</span>
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
