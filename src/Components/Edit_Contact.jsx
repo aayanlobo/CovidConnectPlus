@@ -1,9 +1,8 @@
-// The file is used to edit contact details which are already registered
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { editContact } from '../Redux/action';
-import React from "react";
+
 
 function EditContact() {
 
@@ -42,7 +41,7 @@ function EditContact() {
 
     useEffect(() => {
 
-        AllContact.filter((el) => el.id === id && setForm(el))
+        AllContact.filter((el) => el.id == id && setForm(el))
 
     }, [])
 

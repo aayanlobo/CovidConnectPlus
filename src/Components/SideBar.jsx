@@ -1,7 +1,8 @@
 //It is used to design the dashboard of the Web App
 import contact from '../utils/contact-book.png';
 import bar from '../utils/bar-chart.png';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import git from '../utils/Git.png'
 import React from "react";
 export default function Sidebar() {
     return (
@@ -32,6 +33,14 @@ export default function Sidebar() {
                                     className="flex items-center p-2 space-x-3 rounded-md font-bold hover:font-outline">
                                     <img src={bar} alt="" />
                                     <span>Charts And Maps</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm">
+                                <Link
+                                     to={{pathname: "https://github.com/aayanlobo/CovidConnectPlus" }} target="_blank"
+                                    className="flex items-center p-2 space-x-3 rounded-md font-bold hover:font-outline">
+                                    <img src={git} alt="" />
+                                    <span>GitHub Repo</span>
                                 </Link>
                             </li>
                         </ul>
