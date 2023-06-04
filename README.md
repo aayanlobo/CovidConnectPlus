@@ -1,7 +1,7 @@
 <h1>CovidConnectPlus</h1>
 <img src = 'assets/logo.png' alt = 'logo' >
 <h1>A Contact Management App with Charts and Maps of Covid Cases all over the World.  
-<h1>What is the task assigned by Taiyo.ai ?</h1>
+<h1>What is the task assigned by Taiyo.AI ?</h1>
 <ul>
 <li>Create a Contact Management app with Charts and Maps using ReactJS, TypeScript,
 TailwindCSS, React Router v6 and React Query aka TanstackQuery</li>
