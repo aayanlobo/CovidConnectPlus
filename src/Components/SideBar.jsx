@@ -36,7 +36,7 @@ export default function Sidebar() {
                                 </Link>
                             </li>
                             <li className="rounded-sm">
-                                 <a
+                                <a
                                     href="https://github.com/aayanlobo/CovidConnectPlus"  target="_blank"
                                     className="flex items-center p-2 space-x-3 rounded-md font-bold hover:font-outline">
                                     <img src={git} alt="" />
