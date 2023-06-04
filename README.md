@@ -1,5 +1,5 @@
 <h1>CovidConnectPlus</h1>
-<img src = 'assets/logo.png' alt = 'logo' ></img>
+<img src = 'assets/logo.png' alt = 'logo' >
 <h1>A Contact Management App with Charts and Maps of Covid Cases all over the World.  
 <h1>What is the task assigned by Taiyo.ai ?</h1>
 <ul>
